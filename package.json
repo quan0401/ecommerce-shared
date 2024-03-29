@@ -4,7 +4,7 @@
   "main": "index.js",
   "description": "Ecomerce library for Jobber app",
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   },
   "scripts": {
     "build": "npm run build:cjs && npm run build:esm && tsc --outDir build/src && node scripts/build-package.js",
@@ -22,7 +22,7 @@
   "author": "Dong Minh Quan",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git+https://github.com/quan0401/ecommerce-shared.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
@@ -39,8 +39,15 @@
   },
   "types": "./src/index.d.ts",
   "dependencies": {
+    "@elastic/elasticsearch": "^8.13.0",
+    "cloudinary": "^2.0.3",
     "express": "^4.19.2",
-    "typescript": "^5.4.3"
+    "http-status-codes": "^2.3.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.2.3",
+    "typescript": "^5.4.3",
+    "winston": "^3.13.0",
+    "winston-elasticsearch": "^0.18.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.24.1",
