@@ -21,8 +21,8 @@ jobs:
       - run: npm install
       - run: npm run build
       - run: |
-          echo @quan0401:https://npm.pkg.github.com/quan0401/ > build.npmrc
-          echo //npm.pkg.github.com/:_authToken=${NPM_TOKEN} >> build.npmrc
+          echo @quan0401:https://npm.pkg.github.com/quan0401/ > build/.npmrc
+          echo //npm.pkg.github.com/:_authToken=${NPM_TOKEN} >> build/.npmrc
       - run: npm publish
         working-directory: ./build
         env:
