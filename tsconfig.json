@@ -2,9 +2,9 @@
   "compilerOptions": {
     "declaration": true,
     "emitDeclarationOnly": true,
+    "importHelpers": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
-    "importHelpers": true,
     "jsx": "react-jsx",
     "lib": [
       "dom",

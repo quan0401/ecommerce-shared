@@ -15,7 +15,7 @@ interface IError {
   comingFrom: string;
 }
 
-abstract class CustomeError extends Error {
+export abstract class CustomeError extends Error {
   abstract statusCode: number;
   abstract status: string;
   comingFrom: string;

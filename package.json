@@ -1,8 +1,8 @@
 {
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "MIT",
   "main": "index.js",
-  "description": "Ecomerce library for Jobber app",
+  "description": "Ecomerce library for Kento Ecommerce app",
   "engines": {
     "node": ">=20"
   },
