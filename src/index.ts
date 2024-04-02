@@ -87,6 +87,7 @@ export {
   FileTooLargeError,
   ServerError,
   ErrornoException,
+  CustomeError,
 } from './error-handler';
 
 export { verifyGatewayRequest } from './gateway-middleware';
