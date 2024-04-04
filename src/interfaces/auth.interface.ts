@@ -35,7 +35,7 @@ export interface IAuthDocument {
   updatedAt?: Date;
   passwordResetToken?: string;
   passwordResetExpires?: Date;
-  comparePassword(password: string): Promise<boolean>;
+  comparePassword(password: string, hashedPassword: string): Promise<boolean>;
   hashPassword(password: string): Promise<string>;
 }
 
