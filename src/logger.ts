@@ -44,3 +44,21 @@ export const winstonLogger = (
   });
   return logger;
 };
+
+export const consoleLogger = (name: string, level: string): Logger => {
+  const options = {
+    console: {
+      level,
+      handleExceptions: true,
+      json: false,
+      colorize: true,
+    },
+  };
+
+  const logger: Logger = winston.createLogger({
+    exitOnError: false,
+    defaultMeta: { server: name },
+    transports: [new winston.transports.Console(options.console)],
+  });
+  return logger;
+};

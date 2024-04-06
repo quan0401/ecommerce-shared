@@ -3,25 +3,41 @@
     "declaration": true,
     "emitDeclarationOnly": true,
     "importHelpers": true,
-    "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
-    "jsx": "react-jsx",
     "lib": [
       "dom",
-      "esnext"
+      "ES2015"
     ],
-    "module": "esnext",
-    "moduleResolution": "node",
-    "noEmitOnError": true,
+    "module": "CommonJS",
+    "baseUrl": ".",
     "outDir": "build",
-    "rootDir": "src",
-    "sourceMap": true,
+    "rootDir": ".",
     "strict": true,
-    "target": "es2021",
+    "noImplicitAny": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "alwaysStrict": true,
+    "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
     "pretty": true,
-    "resolveJsonModule": true,
+    "plugins": [
+      {
+        "transform": "typescript-transform-paths"
+      },
+      {
+        "transform": "typescript-transform-paths",
+        "afterDeclarations": true
+      }
+    ],
+    "paths": {
+      "~/*": [
+        "src/*"
+      ]
+    }
   },
   "include": [
     "src"
