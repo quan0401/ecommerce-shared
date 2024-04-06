@@ -92,7 +92,7 @@ export {
 
 export { verifyGatewayRequest } from './gateway-middleware';
 
-export { winstonLogger } from './logger';
+export { winstonLogger, consoleLogger } from './logger';
 
 export {
   firstLetterUppercase,
