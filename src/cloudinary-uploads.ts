@@ -6,10 +6,10 @@ import {
 
 export const uploads = (
   file: string,
+  folder: string,
   public_id?: string,
   overwrite?: boolean,
-  invalidate?: boolean,
-  folder?: string
+  invalidate?: boolean
 ): Promise<UploadApiResponse | UploadApiErrorResponse | undefined> =>
   new Promise((resolve) => {
     cloudinary.uploader.upload(
@@ -33,10 +33,10 @@ export const uploads = (
 
 export const uploads_video = (
   file: string,
+  folder: string,
   public_id?: string,
   overwrite?: boolean,
-  invalidate?: boolean,
-  folder?: string
+  invalidate?: boolean
 ): Promise<UploadApiResponse | UploadApiErrorResponse | undefined> =>
   new Promise((resolve) => {
     cloudinary.uploader.upload(
@@ -49,6 +49,24 @@ export const uploads_video = (
         chunk_size: 50000,
         folder,
       },
+      (
+        error: UploadApiErrorResponse | undefined,
+        result: UploadApiResponse | undefined
+      ) => {
+        if (error) resolve(error);
+        resolve(result);
+      }
+    );
+  });
+
+export const deleteFile = (
+  folder: string,
+  public_id: string
+): Promise<UploadApiResponse | UploadApiErrorResponse | undefined> =>
+  new Promise((resolve) => {
+    cloudinary.uploader.destroy(
+      `${folder}/${public_id}`,
+      {},
       (
         error: UploadApiErrorResponse | undefined,
         result: UploadApiResponse | undefined
