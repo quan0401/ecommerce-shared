@@ -8,7 +8,8 @@ export const uploads = (
   file: string,
   public_id?: string,
   overwrite?: boolean,
-  invalidate?: boolean
+  invalidate?: boolean,
+  folder?: string
 ): Promise<UploadApiResponse | UploadApiErrorResponse | undefined> =>
   new Promise((resolve) => {
     cloudinary.uploader.upload(
@@ -18,6 +19,7 @@ export const uploads = (
         overwrite,
         invalidate,
         resource_type: 'auto', // zip, images
+        folder,
       },
       (
         error: UploadApiErrorResponse | undefined,
@@ -33,7 +35,8 @@ export const uploads_video = (
   file: string,
   public_id?: string,
   overwrite?: boolean,
-  invalidate?: boolean
+  invalidate?: boolean,
+  folder?: string
 ): Promise<UploadApiResponse | UploadApiErrorResponse | undefined> =>
   new Promise((resolve) => {
     cloudinary.uploader.upload(
@@ -44,6 +47,7 @@ export const uploads_video = (
         invalidate,
         resource_type: 'video', // zip, images
         chunk_size: 50000,
+        folder,
       },
       (
         error: UploadApiErrorResponse | undefined,
