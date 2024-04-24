@@ -18,17 +18,17 @@ export function verifyGatewayRequest(
   res: Response,
   next: NextFunction
 ): void {
-  if (!req.headers?.gatewayToken)
+  if (!req.headers?.gatewaytoken)
     throw new NotAuthorizedError(
       'Invalid Request',
       'verifyGatewayRequest(): request not coming from api gateway'
     );
-  const token: string = req.headers.gatewayToken as string;
+  const token: string = req.headers.gatewaytoken as string;
   try {
     // todo pass secret later
     const payload: { id: string; iat: number } = jwt.verify(
       token,
-      'secret'
+      '1282722b942e08c8a6cb033aa6ce850e'
     ) as { id: string; iat: number };
     if (!tokens.includes(payload.id))
       throw new NotAuthorizedError(
