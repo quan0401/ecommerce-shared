@@ -6,10 +6,10 @@ import { ISellerDocument } from './seller.interface';
 export interface IConversationDocument extends Document {
   _id: mongoose.Types.ObjectId | string;
   conversationId: string;
-  // senderUsername: string;
-  // receiverUsername: string;
-  participants: mongoose.Types.ObjectId[] | string[];
-  title: string;
+  senderUsername: string;
+  receiverUsername: string;
+  senderEmail: string;
+  receiverEmail: string;
 }
 
 export interface IMessageDocument {
