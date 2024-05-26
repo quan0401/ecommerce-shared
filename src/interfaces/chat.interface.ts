@@ -6,8 +6,10 @@ import { ISellerDocument } from './seller.interface';
 export interface IConversationDocument extends Document {
   _id: mongoose.Types.ObjectId | string;
   conversationId: string;
-  senderUsername: string;
-  receiverUsername: string;
+  // senderUsername: string;
+  // receiverUsername: string;
+  participants: mongoose.Types.ObjectId[] | string[];
+  title: string;
 }
 
 export interface IMessageDocument {
@@ -23,8 +25,10 @@ export interface IMessageDocument {
   sellerId?: string;
   buyerId?: string;
   senderUsername?: string;
+  senderEmail?: string;
   senderPicture?: string;
   receiverUsername?: string;
+  receiverEmail?: string;
   receiverPicture?: string;
   isRead?: boolean;
   hasOffer?: boolean;
@@ -35,6 +39,8 @@ export interface IMessageDocument {
 
 export interface IMessageDetails {
   sender?: string;
+  senderEmail?: string;
+  receiverEmail?: string;
   offerLink?: string;
   amount?: string;
   buyerUsername?: string;
@@ -47,7 +53,7 @@ export interface IMessageDetails {
 
 export interface IChatBoxProps {
   seller: IChatSellerProps;
-  buyer: IChatBuyerProps
+  buyer: IChatBuyerProps;
   gigId: string;
   onClose: () => void;
 }
