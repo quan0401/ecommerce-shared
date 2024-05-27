@@ -1,4 +1,4 @@
-import mongoose, { ObjectId } from 'mongoose';
+import mongoose, { ObjectId, Document } from 'mongoose';
 import { IOffer } from './order.interface';
 import { ISellerGig } from './gig.interface';
 import { ISellerDocument } from './seller.interface';
