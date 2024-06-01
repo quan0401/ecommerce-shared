@@ -60,6 +60,8 @@ export interface IOrderMessage {
   amount?: string;
   buyerUsername?: string;
   sellerUsername?: string;
+  buyerEmail?: string;
+  sellerEmail?: string;
   title?: string;
   description?: string;
   deliveryDays?: string;
