@@ -6,6 +6,8 @@ export interface IEmailLocals {
   amount?: string;
   buyerUsername?: string;
   sellerUsername?: string;
+  buyerEmail?: string;
+  sellerEmail?: string;
   title?: string;
   description?: string;
   deliveryDays?: string;
