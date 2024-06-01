@@ -36,7 +36,6 @@ export interface IMessageDocument {
   hasConversationId?: boolean;
   createdAt?: Date | string;
 }
-
 export interface IMessageDetails {
   sender?: string;
   senderEmail?: string;

@@ -1,4 +1,3 @@
-
 export interface IOffer {
   [key: string]: string | number | boolean | undefined;
   gigTitle: string;
@@ -118,8 +117,10 @@ export interface IOrderNotifcation {
   _id?: string;
   userTo: string;
   senderUsername: string;
+  senderEmail: string;
   senderPicture: string;
   receiverUsername: string;
+  receiverEmail: string;
   receiverPicture: string;
   isRead?: boolean;
   orderId: string;
