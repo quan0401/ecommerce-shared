@@ -24,6 +24,7 @@ export interface IReviewDocument {
   orderId: string;
   createdAt: Date | string;
   reviewerUsername: string;
+  reviewerEmail: string;
   country: string;
   reviewType?: string;
 }

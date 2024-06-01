@@ -25,7 +25,7 @@ export function verifyGatewayRequest(
     );
   const token: string = req.headers.gatewaytoken as string;
   try {
-    // todo pass secret later
+    // TODO: pass secret later
     const payload: { id: string; iat: number } = jwt.verify(
       token,
       '1282722b942e08c8a6cb033aa6ce850e'
